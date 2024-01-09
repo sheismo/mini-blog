@@ -61,7 +61,7 @@ else if(isset($_POST['userLogin'])) {
     if($userExists != NULL) {
         $savedPassword = $userExists['password'];
         if($utility->checkPassword($password, $savedPassword)) {
-            echo "password is now hashed";
+            // echo "password is now hashed";
             $userId = $userExists['id'];
             $_SESSION['user_id'] = $userId;
             // Since user is logged, let's redirect the user to the dashboard
